@@ -75,7 +75,7 @@
                                 <rect key="frame" x="49" y="422" width="56" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="kiu-gp-WUa" kind="modal" id="ldK-zY-rkX"/>
+                                    <action selector="FBLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JT-GY-nia"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_logo.png" id="P0b-fq-x3Z">
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-353" y="157"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="nJS-5R-khq">
             <objects>
-                <viewController id="kiu-gp-WUa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="kiu-gp-WUa" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gum-6X-t6O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

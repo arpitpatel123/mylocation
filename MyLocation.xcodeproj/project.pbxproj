@@ -26,6 +26,9 @@
 		A9688E9A1CA56A630027C089 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9688E8F1CA56A630027C089 /* Logo.png */; };
 		A9688E9B1CA56A630027C089 /* unnamed.png in Resources */ = {isa = PBXBuildFile; fileRef = A9688E901CA56A630027C089 /* unnamed.png */; };
 		A987CA9C1CAC099600AE16B0 /* User_Follower-64.png in Resources */ = {isa = PBXBuildFile; fileRef = A987CA9B1CAC099600AE16B0 /* User_Follower-64.png */; };
+		A99CEC9C1CAE2F480055F9EF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99CEC9A1CAE2F480055F9EF /* FBSDKCoreKit.framework */; };
+		A99CEC9D1CAE2F480055F9EF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99CEC9B1CAE2F480055F9EF /* FBSDKLoginKit.framework */; };
+		A99CECA01CAE6A7B0055F9EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CEC9F1CAE6A7B0055F9EF /* ProfileViewController.m */; };
 		A9B5CDF91CAA7B820087BA05 /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B5CDF71CAA7B820087BA05 /* facebook_logo.png */; };
 		A9B5CDFA1CAA7B820087BA05 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B5CDF81CAA7B820087BA05 /* twitter_logo.png */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,10 @@
 		A9688E8F1CA56A630027C089 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		A9688E901CA56A630027C089 /* unnamed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unnamed.png; sourceTree = "<group>"; };
 		A987CA9B1CAC099600AE16B0 /* User_Follower-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User_Follower-64.png"; sourceTree = "<group>"; };
+		A99CEC9A1CAE2F480055F9EF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-20160316/FBSDKCoreKit.framework"; sourceTree = SOURCE_ROOT; };
+		A99CEC9B1CAE2F480055F9EF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-20160316/FBSDKLoginKit.framework"; sourceTree = SOURCE_ROOT; };
+		A99CEC9E1CAE6A7B0055F9EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A99CEC9F1CAE6A7B0055F9EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A9B5CDF71CAA7B820087BA05 /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo.png; sourceTree = "<group>"; };
 		A9B5CDF81CAA7B820087BA05 /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99CEC9D1CAE2F480055F9EF /* FBSDKLoginKit.framework in Frameworks */,
+				A99CEC9C1CAE2F480055F9EF /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,10 +137,14 @@
 		A9688E511CA569950027C089 /* MyLocation */ = {
 			isa = PBXGroup;
 			children = (
+				A99CEC9A1CAE2F480055F9EF /* FBSDKCoreKit.framework */,
+				A99CEC9B1CAE2F480055F9EF /* FBSDKLoginKit.framework */,
 				A9688E551CA569950027C089 /* AppDelegate.h */,
 				A9688E561CA569950027C089 /* AppDelegate.m */,
 				A9688E581CA569950027C089 /* ViewController.h */,
 				A9688E591CA569950027C089 /* ViewController.m */,
+				A99CEC9E1CAE6A7B0055F9EF /* ProfileViewController.h */,
+				A99CEC9F1CAE6A7B0055F9EF /* ProfileViewController.m */,
 				A9688E5B1CA569950027C089 /* Main.storyboard */,
 				A9688E5E1CA569950027C089 /* Assets.xcassets */,
 				A9688E601CA569950027C089 /* LaunchScreen.storyboard */,
@@ -332,6 +345,7 @@
 			files = (
 				A9688E5A1CA569950027C089 /* ViewController.m in Sources */,
 				A9688E571CA569950027C089 /* AppDelegate.m in Sources */,
+				A99CECA01CAE6A7B0055F9EF /* ProfileViewController.m in Sources */,
 				A9688E541CA569950027C089 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +490,7 @@
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160316",
 				);
 				INFOPLIST_FILE = MyLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.MyLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +506,7 @@
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160316",
 				);
 				INFOPLIST_FILE = MyLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.MyLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
